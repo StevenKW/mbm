@@ -1,0 +1,76 @@
+/* So the HTML5 structural tags work in older browsers */
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+
+body {
+    font-size: 90%;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    background-color: #CCC;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 850px;
+    margin: 0 auto;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: center;
+}
+
+main img {
+    position: relative;
+
+}
+
+header {
+    text-align: center;
+    color: #000000;
+    text-shadow: #d0fda6 2px 2px 2px;
+}
+
+section {
+    margin: 1em auto;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+}
+
+section p {
+    margin: 1em auto;
+    width: 600px;
+}
+
+form {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+}
+
+th {
+    font-size: .7em;
+}
+
+input {
+    text-align: center;
+}
+
+.click {
+    font-size: 5em;
+    -webkit-transform: perspective(100px) rotateX(-45deg);
+    -moz-transform: perspective(600px) rotateX(-45deg);
+    -o-transform: perspective(600px) rotateX(-45deg);
+    transform: perspective(600px) rotateY(-45deg);
+}
+
+/*.result {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: -1;
+}*/
+

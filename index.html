@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Model Box Make Out v0.01</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic' rel='stylesheet'
+          type='text/css'>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/er.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script type="text/javascript" src="scripts/javascript.js"></script>
+</head>
+<body>
+<main>
+    <header>
+        <h1>Entity Relationship Creator</h1>
+        <img src="images/header_entity_image.png" width="800">
+    </header>
+    <section>
+        <p>This web application will let you easily create computer drawn Entity Relationship boxes to get your
+            ER-Diagram started. It can difficult to visualize both directions of the relationship along with the
+            relationship description and the cardinality symbols.</p>
+
+        <p>Here you can build each direction of the relation in easy to understand text. Once everything is filled out
+            the way you like you can submit the form and have the application return an SVG graphic that you can use
+            as-is or import into a graphic application for further construction.</p>
+    </section>
+    <form action="scripts/draw_erbox.php" method="post">
+        <table>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Entity</th>
+                <th>Action</th>
+                <th>Cardinality</th>
+                <th>Entity</th>
+            </tr>
+            <tr>
+                <th>Each</th>
+                <td><input type="text" id="entityA" name="entityA" value="CUSTOMER"></td>
+                <td><input type="text" name="a_verb_b" value="Places"></td>
+                <td><select name="a_card_b">
+                    <option value="11 One and Only One">One and Only One</option>
+                    <option selected value="1M One or More">One or More</option>
+                    <option value="01 Zero or One">Zero or One</option>
+                    <option value="0M Zero or More">Zero or More</option>
+                </select></td>
+                <td><input type="text" id="entityB" name="entityB" value="ORDER"></td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td colspan="4"><img src="images/Arrows.png" width="510"></td>
+            </tr>
+
+            <tr>
+                <th>Each</th>
+                <td><input type="text" id="entityBto" name="entityBto" value="ORDER" disabled="disabled"></td>
+                <td><input type="text" name="b_verb_a" value="Is Placed By"></td>
+                <td><select name="b_card_a">
+                    <option selected value="11 One and Only One">One and Only One</option>
+                    <option value="M1 One or More">One or More</option>
+                    <option value="10 Zero or One">Zero or One</option>
+                    <option value="M0 Zero or More">Zero or More</option>
+                </select></td>
+                <td><input type="text" id="entityAto" name="entityAto" value="CUSTOMER" disabled="disabled"></td>
+
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td colspan="4"><img src="images/down_arrow.png" width="75"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td colspan="4"><input type="image" src="images/shinyredbutton.png" width="400"></td>
+            </tr>
+        </table>
+    </form>
+
+</main>
+</body>
+</html>
